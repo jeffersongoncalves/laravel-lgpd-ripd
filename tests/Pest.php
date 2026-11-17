@@ -1,3 +1,5 @@
 <?php
 
-uses(JeffersonGoncalves\LgpdRipd\Tests\TestCase::class)->in('Feature', 'Unit');
+use JeffersonGoncalves\LgpdRipd\Tests\TestCase;
+
+uses(TestCase::class)->in('Feature', 'Unit');

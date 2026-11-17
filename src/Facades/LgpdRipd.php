@@ -3,14 +3,18 @@
 namespace JeffersonGoncalves\LgpdRipd\Facades;
 
 use Illuminate\Support\Facades\Facade;
+use JeffersonGoncalves\LgpdRipd\RipdManager;
 
 /**
- * @see \JeffersonGoncalves\LgpdRipd\LgpdRipd
+ * @method static list<array{activity: \JeffersonGoncalves\LgpdRecords\Models\ProcessingActivity, reasons: list<string>}> candidates()
+ * @method static array<string, mixed> export(\JeffersonGoncalves\LgpdRipd\Models\ImpactAssessment $assessment)
+ *
+ * @see RipdManager
  */
 class LgpdRipd extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'laravel-lgpd-ripd';
+        return RipdManager::class;
     }
 }
